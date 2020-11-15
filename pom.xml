@@ -18,30 +18,34 @@
         <junit5.version>5.6.2</junit5.version>
         <slf4j.version>1.7.6</slf4j.version>
 
-        <spring.version>5.2.6.RELEASE</spring.version>
+        <spring.boot.version>2.4.0</spring.boot.version>
     </properties>
 
     <dependencies>
         <!-- test -->
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>${spring.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring.boot.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit5.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.vintage</groupId>
             <artifactId>junit-vintage-engine</artifactId>
             <version>${junit5.version}</version>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
+            <scope>test</scope>
         </dependency>
 
         <!-- log -->
@@ -56,13 +60,30 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.12</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- project -->
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
             <version>3.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>hikari-cp</groupId>
+            <artifactId>hikari-cp</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.22</version>
         </dependency>
 
     </dependencies>

@@ -22,9 +22,9 @@ public class MyBatisSchemaSettings {
     private String password;
 
     /** 数据库表引擎 */
-    private String dbEngine;
+    private String engine;
     /** 数据库表字符集 */
-    private String dbCharset;
+    private String charset;
 
     /** 实体类集合 */
     private Collection<Class<?>> entityClasses;
